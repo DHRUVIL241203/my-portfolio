@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhruvil Trivedi | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cursor-dot {
+            cursor: url('https://cdn-icons-png.flaticon.com/512/1828/1828817.png'), auto;
+        }
+
+        .cursor-cross {
+            cursor: crosshair;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="body" class="bg-gray-900 text-white transition-colors duration-500"></body>
+<!-- Settings Icon -->
+<div id="settingsBtn"
+    class="fixed top-5 right-5 bg-orange-500 p-3 rounded-full shadow-lg hover:rotate-180 transition-all duration-500 cursor-pointer z-50">
+    ⚙️
+</div>
+<!-- Settings Panel -->
+<div id="settingsPanel"
+    class="fixed top-0 right-0 h-full w-64 bg-gray-800 shadow-lg p-5 transform translate-x-full transition-all duration-500 z-40">
+    <h3 class="text-2xl font-bold mb-4 text-orange-400">Customize</h3>
+    <div class="mb-6">
+        <h4 class="text-lg mb-2">Cursor Style</h4>
+        <button onclick="setCursor('default')" class="bg-gray-700 px-3 py-1 rounded mr-2">Default</button>
+        <button onclick="setCursor('dot')" class="bg-gray-700 px-3 py-1 rounded mr-2">Dot</button>
+        <button onclick="setCursor('cross')" class="bg-gray-700 px-3 py-1 rounded">Crosshair</button>
+    </div>
+    <div>
+        <h4 class="text-lg mb-2">Theme Color</h4>
+        <div class="flex space-x-3">
+            <div onclick="setTheme('bg-gray-900')" class="w-8 h-8 bg-gray-900 rounded cursor-pointer border-2"></div>
+            <div onclick="setTheme('bg-blue-900')" class="w-8 h-8 bg-blue-900 rounded cursor-pointer border-2"></div>
+            <div onclick="setTheme('bg-purple-900')" class="w-8 h-8 bg-purple-900 rounded cursor-pointer border-2">
+            </div>
+            <div onclick="setTheme('bg-pink-900')" class="w-8 h-8 bg-pink-900 rounded cursor-pointer border-2"></div>
+        </div>
+    </div>
+</div>
+
+
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white font-sans transition-colors duration-500">
+
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center py-6 px-10">
+        <h1 class="text-3xl font-bold text-orange-400">Dhruvil Trivedi</h1>
+        <ul class="hidden md:flex space-x-8 text-lg">
+            <li><a href="   " class="hover:text-orange-400 transition">About</a></li>
+            <li><a href="#projects" class="hover:text-orange-400 transition">Projects</a></li>
+            <li><a href="#contact" class="hover:text-orange-400 transition">Contact</a></li>
+        </ul>
+        <div class="flex items-center space-x-4">
+            <button id="modeToggle" class="text-orange-400 border border-orange-500 px-3 py-1 rounded transition">Toggle
+                Mode</button>
+            <button class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg text-lg shadow-lg">Let's
+                Connect</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-8 py-24 fade-in-up">
+        <div class="max-w-2xl">
+            <p class="text-orange-400 text-lg mb-3">Hello, I'm Dhruvil</p>
+
+
+            <h2 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6">I build clean, creative web projects and
+                apps that deliver results.</h2>
+            <p class="text-gray-300 text-xl mb-8">Full-Stack Developer & IT Engineer | Creator of Medibook and dynamic
+                web solutions.</p>
+            <div class="flex space-x-4">
+                <a href="#projects"
+                    class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-xl transition shadow-lg">View My
+                    Work</a>
+                <a href="DHRUVIL TRIVEDI CV.pdf" download
+                    class="border border-orange-400 text-orange-400 px-6 py-3 rounded-lg text-xl hover:bg-orange-500 hover:text-white transition">Download
+                    Resume</a>
+            </div>
+        </div>
+        <div class="mt-12 md:mt-0 md:ml-10">
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <img src="IMG_9843-removebg-preview.png" alt="Dhruvil Trivedi"
+                    class="w-[400px] h-[500px] object-cover rounded-2xl">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="max-w-6xl mx-auto px-8 py-20 fade-in-up">
+        <h3 class="text-4xl font-bold mb-6 text-orange-400">About Me</h3>
+        <p class="text-lg text-gray-300 leading-relaxed">I’m an IT Engineer and full-stack web developer with a passion
+            for crafting clean, functional, and creative web applications. From personal portfolios to large management
+            systems like <strong class="text-orange-400">Medibook</strong>, I thrive on solving real-world problems
+            using modern web technologies.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-6xl mx-auto px-8 py-20 fade-in-up">
+        <h3 class="text-4xl font-bold mb-10 text-orange-400">Projects</h3>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+                <h4 class="text-2xl font-semibold mb-3 text-white">Medibook</h4>
+                <p class="text-gray-300 mb-4">A hospital management system built with PHP Laravel. Features include
+                    patient registration, doctor appointment management, billing, medical reports, and secure chat
+                    functionality for doctors and patients.</p>
+                <a href="#" class="text-orange-400 hover:underline">View Details →</a>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+                <h4 class="text-2xl font-semibold mb-3 text-white">Portfolio Website</h4>
+                <p class="text-gray-300 mb-4">This responsive personal portfolio showcases my web design and frontend
+                    development skills using TailwindCSS, animations, and modern design principles.</p>
+                <a href="#" class="text-orange-400 hover:underline">Visit Site →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Work Projects with Photos -->
+    <section id="work-projects" class="max-w-6xl mx-auto px-8 py-20 fade-in-up">
+        <h3 class="text-4xl font-bold mb-10 text-orange-400">My Recent Work</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <div class="bg-gray-800 p-4 rounded-2xl shadow-lg hover:scale-105 transition">
+                <img src="IMG_0112.png" alt="Project 1" class="rounded-lg mb-4 h-48 w-full object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-white">E-Commerce Website</h4>
+                <p class="text-gray-300">Modern, responsive online store built with Laravel and TailwindCSS.</p>
+            </div>
+
+            <div class="bg-gray-800 p-4 rounded-2xl shadow-lg hover:scale-105 transition">
+                <img src="Screenshot 2025-04-17 113751.png" alt="Project 2"
+                    class="rounded-lg mb-4 h-48 w-full object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-white">Hospital Chat App</h4>
+                <p class="text-gray-300">Secure real-time chat between doctors and patients inside Medibook.</p>
+            </div>
+
+            <div class="bg-gray-800 p-4 rounded-2xl shadow-lg hover:scale-105 transition">
+                <img src="Screenshot 2025-04-17 113935.png" alt="Project 3"
+                    class="rounded-lg mb-4 h-48 w-full object-cover">
+                <h4 class="text-2xl font-semibold mb-2 text-white">Personal Portfolio</h4>
+                <p class="text-gray-300">This website showcasing all my projects, skills, and contact info.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-8 py-20">
+        <h3 class="text-4xl font-bold mb-10 text-orange-400 text-center">My Work Process</h3>
+
+        <div class="grid md:grid-cols-4 gap-8">
+
+            <!-- Step 1 -->
+            <div class="bg-gray-800 p-6 rounded-2xl text-center shadow-lg slide-in-zoom">
+                <img src="absolutvision-82TpEld0_e4-unsplash.jpg" alt="Idea" class="w-21 h-21 mx-auto mb-4">
+                <h4 class="text-2xl font-semibold mb-2 text-orange-400">Idea</h4>
+                <p class="text-gray-300">Brainstorming & concept planning for the project flow.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="bg-gray-800 p-6 rounded-2xl text-center shadow-lg slide-in-zoom" style="animation-delay: 0.3s;">
+                <img src="fashion-designer-working-design.jpg" alt="Design" class="w-21 h-21 mx-auto mb-4">
+                <h4 class="text-2xl font-semibold mb-2 text-orange-400">Design</h4>
+                <p class="text-gray-300">Wireframing, UI/UX & design prototypes with Tailwind magic.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="bg-gray-800 p-6 rounded-2xl text-center shadow-lg slide-in-zoom" style="animation-delay: 0.6s;">
+                <img src="professional-programmer-working-late-dark-office.jpg" alt="Development"
+                    class="w-21 h-21 mx-auto mb-4">
+                <h4 class="text-2xl font-semibold mb-2 text-orange-400">Development</h4>
+                <p class="text-gray-300">Clean, scalable code and responsive layouts using modern tech.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="bg-gray-800 p-6 rounded-2xl text-center shadow-lg slide-in-zoom" style="animation-delay: 0.9s;">
+                <img src="hand-hold-space-rocket-paper-carving-with-sky-background.jpg" alt="Launch"
+                    class="w-21 h-21 mx-auto mb-4">
+                <h4 class="text-2xl font-semibold mb-2 text-orange-400">Launch</h4>
+                <p class="text-gray-300">Final testing, optimization & launch with client training.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Testimonials Slider -->
+    <section class="max-w-6xl mx-auto px-8 py-20 fade-in-up">
+        <h3 class="text-4xl font-bold mb-10 text-orange-400">What People Say</h3>
+        <div id="testimonial" class="text-center text-xl text-gray-300"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="max-w-6xl mx-auto px-8 py-20 fade-in-up">
+        <h3 class="text-4xl font-bold mb-6 text-orange-400">Get In Touch</h3>
+        <p class="text-gray-300 text-lg mb-8">Interested in working together or have a project idea? Let’s chat!</p>
+        <a href="mailto:trivedidhruvil24@gmail.com"
+            class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg text-xl transition shadow-lg">Send Me an
+            Email</a>
+    </section>
+
+    <footer class="text-center text-gray-500 py-10 border-t border-gray-700 mt-10">
+        © 2025 Dhruvil Trivedi. Crafted with ❤️ using Tailwind CSS.
+    </footer>
+
+    <script>
+        // Dark mode toggle
+        const modeToggle = document.getElementById("modeToggle");
+        const htmlEl = document.documentElement;
+        modeToggle.addEventListener("click", () => {
+            htmlEl.classList.toggle("dark");
+        });
+
+        // Testimonials slider
+        const testimonials = [
+            "“Dhruvil is a brilliant developer! Our hospital system works flawlessly because of him.”",
+            "“Highly recommended for anyone looking for modern, clean, and fast web solutions.”",
+            "“His Medibook project streamlined our clinic operations entirely!”"
+        ];
+        let index = 0;
+        const testimonialEl = document.getElementById("testimonial");
+        function showTestimonial() {
+            testimonialEl.textContent = testimonials[index];
+            index = (index + 1) % testimonials.length;
+        }
+        setInterval(showTestimonial, 3000);
+        showTestimonial();
+
+        const settingsBtn = document.getElementById('settingsBtn');
+        const settingsPanel = document.getElementById('settingsPanel');
+        const body = document.getElementById('body');
+
+        settingsBtn.addEventListener('click', () => {
+            settingsPanel.classList.toggle('translate-x-full');
+        });
+
+        function setCursor(style) {
+            body.classList.remove('cursor-dot', 'cursor-cross', 'cursor-pointer');
+            if (style === 'dot') body.classList.add('cursor-dot');
+            else if (style === 'cross') body.classList.add('cursor-cross');
+            else if (style === 'pointer') body.classList.add('cursor-pointer');
+        }
+
+        function setTheme(color) {
+            body.classList.remove('bg-gray-900', 'bg-blue-900', 'bg-purple-900', 'bg-pink-900');
+            body.classList.add(color);
+        }
+    </script>
+
+</body>
+
+</html>
